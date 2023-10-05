@@ -1,0 +1,120 @@
+:root {
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
+	--body-bg: #fff;
+	--bg: #fff;
+	--fg: #000;
+	--link: #07f;
+	--link-hover-bg: #07f2;
+	--link-active-bg: #07f4;
+	--link-visited: #c0c;
+	--link-visited-hover-bg: #c0c2;
+	--link-visited-active-bg: #c0c4;
+	--selection: #07f4;
+	--button-hover-bg: #0002;
+	--button-active-bg: #0004;
+	--basic-button-fg: #fff;
+	--basic-button-bg: #28f;
+	--basic-button-hover-bg: #5af;
+	--basic-button-active-bg: #05d;
+	--font: Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-bg: #223;
+		--bg: #223;
+		--fg: #fff;
+		--link: #0cf;
+		--link-hover-bg: #0cf3;
+		--link-active-bg: #0cf5;
+		--link-visited: #c0c;
+		--link-visited-hover-bg: #c0c2;
+		--link-visited-active-bg: #c0c4;
+		--selection: #0cf6;
+		--button-hover-bg: #0002;
+		--button-active-bg: #0004;
+		--basic-button-fg: #fff;
+		--basic-button-bg: #28f;
+		--basic-button-hover-bg: #5af;
+		--basic-button-active-bg: #05d;
+	}
+}
+
+body {
+	display: flex;
+	font-family: var(--font);
+	background: var(--body-bg);
+	color: var(--fg);
+	font-size: 14pt;
+	margin: 0;
+}
+
+#page-container {
+	display: flex;
+	gap: 16px;
+	max-width: 8in;
+	padding: 0.25in;
+	margin: auto;
+}
+
+#canvas {
+	width: 304px;
+	height: 724px;
+}
+
+#game-over {
+	display: none;
+	flex-direction: row;
+	gap: 8px;
+}
+
+#info {
+	float: right;
+}
+
+#info > p {
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+*::selection { background-color: var(--selection); }
+
+a {
+	display: inline;
+	position: relative;
+	text-decoration: dotted underline;
+	text-decoration-thickness: 1px;
+	background-color: transparent;
+	color: var(--link);
+}
+
+a:hover { text-decoration: underline; background-color: var(--link-hover-bg); }
+a:active { background-color: var(--link-active-bg); }
+
+a:visited:not(.unvisitable) { color: var(--link-visited); }
+a:visited:not(.unvisitable):hover { background-color: var(--link-visited-hover-bg); }
+a:visited:not(.unvisitable):active { background-color: var(--link-visited-active-bg); }
+
+ul {
+	padding: 0;
+	margin: 0;
+	padding-left: 16px;
+}
+
+button {
+	border: none;
+	border-radius: 2px;
+	background: var(--basic-button-bg);
+	color: var(--basic-button-fg);
+	font-family: var(--font);
+	font-size: inherit;
+	padding: 4px 12px;
+}
+
+button:disabled {
+	opacity: 0.5;
+}
+
+button:not(:disabled):hover { background: var(--basic-button-hover-bg); }
+button:not(:disabled):active { background: var(--basic-button-active-bg); }

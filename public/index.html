@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Soft-body Tetris</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="bundle.js" defer></script>
+	</head>
+	<body>
+		<div id="page-container">
+			<canvas id="canvas"></canvas>
+			<div id="info">
+				<p><b>Q</b> to rotate counter-clockwise</p>
+				<p><b>E</b> to rotate clockwise</p>
+				<p><b>Left/right arrows</b> or <b>(W)ASD</b> to move</p>
+				<p><b>Down arrow</b> to make the tetromino fall faster</p>
+				<p><b>Space</b> to shoot the tetromino down</p>
+				<p>The game ends when a tetromino spawns and immediately collides with something</p>
+				<p>
+					<a href="https://github.com/brianush1/softbody-tetris">Source code on GitHub</a>
+					<br>
+					<a href="/">Check out my homepage</a>
+				</p>
+				<div id="game-over"><button id="restart">Restart</button><button id="show-board">Show Board</button></div>
+			</div>
+		</div>
+	</body>
+</html>
